@@ -1,0 +1,327 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  color: black !important; /* Text color set to black */
+  -webkit-tap-highlight-color: transparent;
+  -moz-appearance: none;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  background-color: white; /* Background color set to white */
+  display: flex;
+  flex-direction: column; /* To ensure header takes only required height */
+}
+
+.head {
+  display: flex;
+  justify-content: flex-start; /* Align the content to the left */
+  align-items: center;
+  width: 100%;
+  height: 80px; /* Fixed height for the header */
+  padding-left: 2rem; /* Padding to give space around the logo */
+  background-color: #674188; /* Header background color */
+  color: #ffffff; /* Header text color */
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add shadow to distinguish header */
+}
+
+.head img.logo {
+  height: 60px; /* Adjust the logo size */
+  width: auto; /* Maintain aspect ratio */
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: calc(100vh - 100px); /* Adjust height for proper centering */
+  padding: 1.5rem;
+}
+
+.wrapper {
+  width: 80%; /* Adjust wrapper width */
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f4f4f4;
+}
+
+.loader-wrapper {
+  width: fit-content;
+  height: fit-content;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loader-wrapper[show="false"] {
+  display: none;
+}
+
+.main[interact="false"] {
+  pointer-events: none;
+}
+
+.main[interact="false"] * {
+  color: white; /* Adjusted for interaction state */
+}
+
+.opt-wrapper {
+  margin-block-start: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+}
+
+.opt-container {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: rgb(183, 153, 209); /* Background color updated */
+  cursor: pointer;
+  font-size: 0.9rem;
+  border: 1px solid rgb(39, 39, 39);
+  margin: 1px;
+}
+
+.opt-container[selected="true"] {
+  border-color: white !important;
+  border-width: 2px;
+  margin: 0;
+}
+
+.opt-container[selected="true"][ans="yes"] {
+  background-color: green;
+  border-color: transparent !important;
+  color: white !important;
+}
+
+.opt-container[ans="yes"] {
+  border-color: green;
+}
+
+.opt-container[ans="no"] {
+  border-color: red;
+}
+
+.tool {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 1rem;
+  padding: 2rem 3rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: white; /* Tool background color updated */
+  border-block-start: 1px solid rgb(50, 50, 50);
+}
+
+.tool button {
+  background-color: #674188; /* Button background color updated */
+  border: 1px solid rgb(50, 50, 50);
+  padding: 1rem 2rem;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: all 250ms ease-in-out;
+}
+
+.tool button:hover {
+  transform: scale(1.03);
+}
+
+.tool button:active {
+  background-color: #674188; /* Active state updated */
+}
+
+.new[highlight="true"] {
+  border-color: white;
+}
+
+.clear[highlight="true"] {
+  border-color: white;
+  border-width: 1px;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #674188; /* Loader border color updated */
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+.result-container {
+  position: fixed;
+  inset: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.92);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.result-container[show="true"] {
+  display: flex;
+}
+
+.result-container .score-wrapper {
+  background-color: white; /* Updated score-wrapper background color */
+  border: 1px solid rgb(48, 48, 48);
+  border-radius: 1.1rem;
+  padding: 1.3rem 2rem;
+  width: min(75vw, 25rem);
+  transform: translateY(-5vh);
+}
+
+.result-container .final {
+  text-align: center;
+  font-size: 2.5rem;
+  padding: 1.2rem;
+}
+
+.result-container .close-btn,
+.result-container .new-q {
+  padding: 0.8rem 2rem;
+  border-radius: 0.65rem;
+  width: 100%;
+  background-color: #674188; /* Updated button background */
+  border: 1px solid rgb(49, 49, 49);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 300ms ease-in-out;
+}
+
+.result-container .new-q {
+  margin-block-start: 0.8rem;
+}
+
+.new-q,
+.new {
+  border: none !important;
+  background-color: #674188 !important; /* New button background color */
+  color: black; /* New button text color */
+  font-weight: 500;
+}
+
+.result-container .close-btn:hover,
+.result-container .new-q:hover {
+  transform: scale(1.015);
+}
+
+.result-container .close-btn:active {
+  background-color: #674188; /* Updated active background color */
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  max-width: 600px;
+  margin: 1rem auto;
+}
+
+.nav-wrapper button {
+  background-color: #674188;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.nav-wrapper button:hover {
+  background-color: #563072;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 1100px) {
+  .main {
+    grid-template-columns: 1fr;
+  }
+
+  .tool {
+    grid-template-columns: 0.5fr 0.8fr 1fr;
+  }
+}
+
+@media (max-width: 750px) {
+  body {
+    padding-inline: 1.5rem;
+  }
+
+  .main {
+    padding-block-end: 10.2rem;
+    min-height: 26rem;
+  }
+
+  .tool {
+    padding: 1.4rem 1.5rem;
+    grid-template-columns: 1fr 2fr;
+    width: calc(100%);
+    left: 0;
+  }
+
+  button.new {
+    grid-column: 1 / span 2;
+  }
+
+  /* Mobile specific button color adjustments */
+  button.submit {
+    background-color: white; /* Submit button background color */
+    color: black; /* Submit button text color */
+  }
+
+  button.new {
+    background-color: #674188 !important; /* New button background color */
+    border: 1px solid rgb(40, 40, 40) !important;
+    color: white; /* New button text color */
+  }
+
+  .tool button:hover {
+    transform: scale(1.015);
+  }
+
+  .opt-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .wrapper {
+    padding: 1rem 1.6rem;
+    display: none;
+  }
+}
+
+.wrapper.active {
+  display: block; /* Show the active wrapper */
+}

@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background:#ad89cb;
+     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* Prevent body from scrolling */
+}
+.home-button {
+    position: absolute; /* Position it absolutely */
+    top: 1rem; /* Space from the top */
+    left: 1rem; /* Space from the left */
+}
+
+.home-button a {
+    display: inline-flex; /* Use flex for alignment */
+    align-items: center; /* Center icon and text vertically */
+    padding: 0.5rem; /* Padding for the button */
+    background-color: hsl(295, 94%, 28%); /* Button background color */
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Font size */
+}
+
+.home-button a svg {
+    margin-right: 0.5rem; /* Space between icon and text */
+}
+
+.home-button a:hover {
+    background-color: hsl(295, 80%, 25%); /* Darker shade on hover */
+}
+
+/* Additional styles for the register container */
+.register-container {
+    position: relative; /* Set to relative to contain absolute positioning of the home button */
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    max-height: 80vh;
+    text-align: left;
+    overflow-y: auto;
+}
+
+.register-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;  /* Increased width for a larger form box */
+    max-height: 80vh;  /* Maximum height for the form container */
+    text-align: left;
+    overflow-y: auto;  /* Enable vertical scrolling */
+    position: relative;
+}
+
+.background-image {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+/* Hide the scrollbar while still allowing scrolling */
+.register-container::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.logo img {
+    max-width: 150px;
+    height: auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.input-group {
+    margin-bottom: 1.2rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #555;
+}
+
+input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+input:focus {
+    outline: none;
+    border-color: hsl(295, 94%, 28%);;
+}
+
+.action-buttons {
+    margin-top: 1.5rem;
+}
+
+button {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    background-color: hsl(295, 94%, 28%);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color:  hsl(295, 94%, 28%);
+}
+
+.extra-links {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.extra-links a {
+    color: hsl(295, 94%, 28%);;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+.extra-links a:hover {
+    text-decoration: underline;
+}

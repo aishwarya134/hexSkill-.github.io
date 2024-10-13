@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.login-container {
+  background-color: #674188;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 1407px;
+  width: 100%;
+  padding: 0 2px 198px;
+}
+
+@media (max-width: 991px) {
+  .content-wrapper {
+    max-width: 100%;
+    padding-bottom: 100px;
+  }
+}
+
+.background-image {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.header {
+  position: relative;
+  background-color: #fff;
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  font-family: Inter, sans-serif;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 4px 40px 4px 5px;
+}
+
+@media (max-width: 991px) {
+  .header {
+    max-width: 100%;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 991px) {
+  .logo-container {
+    white-space: initial;
+  }
+}
+
+.logo-image {
+  aspect-ratio: 1.10;
+  object-fit: contain;
+  object-position: center;
+  width: 70px;
+}
+.nav-menu {
+  display: flex;
+  gap: 37px;
+  font-size: 14px;
+  color: #000;
+  font-weight: 400;
+  margin: auto 0;
+}
+.welcome-message {
+  display: flex; /* Use Flexbox */
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+  text-align: center; /* Ensure text is centered inside the container */
+  padding: 20px;
+  height: 100vh; /* Make sure it takes full view height to vertically center */
+}
+
+.welcome-message h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+  margin: 0; /* Remove default margin */
+}
+.menu-toggle {
+  background-color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.menu-toggle:hover {
+  background-color: #f0f0f0;
+}
+
+.menu-items {
+  display: none;
+}
+
+.menu-items.active {
+  display: block;
+}
+
+.menu-items li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.menu-items a {
+  text-decoration: none;
+  color: #333;
+}
+
+.menu-items a:hover {
+  color: #666;
+}
+.menu-container {
+  position: absolute; /* Positioning to be below the header */
+  top: 80px; /* Adjust based on header height */
+  left: 0.5px; /* Space from left */
+  background-color: rgba(255, 255, 255, 0.9); /* Background for menu container */
+  padding: 1rem;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+  width: 200px; /* Fixed width for menu */
+}
+
+.menu-button {
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 1.2rem; /* Font size for menu button */
+  display: flex;
+  align-items: center; /* Center icon and text vertically */
+}
+
+.menu-button i {
+  margin-right: 0.5rem; /* Space between icon and text */
+}
+
+.menu-items {
+  display: none; /* Hide menu items initially */
+  margin-top: 1rem; /* Space from the menu button */
+}
+
+.menu-items.show {
+  display: block; /* Show menu items when toggled */
+}
+
+.menu-item {
+  background-color: #f1f1f1; /* Background color for menu items */
+  padding: 0.8rem; /* Padding for menu items */
+  border-radius: 5px; /* Rounded corners */
+  margin-bottom: 0.5rem; /* Space between items */
+  display: flex;
+  align-items: center; /* Center icon and text vertically */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.menu-item:hover {
+  background-color: #e0e0e0; /* Darker background on hover */
+}
+
+.menu-item i {
+  margin-right: 0.5rem; /* Space between icon and text */
+}
+.chat-toggle {
+  position: fixed; /* Fixed position to stay in place */
+  bottom: 20px; /* Distance from the bottom of the page */
+  right: 20px; /* Distance from the right of the page */
+  background-color: #674188; /* Background color */
+  color: white; /* Icon color */
+  padding: 15px; /* Padding for the button */
+  border-radius: 50%; /* Make it a circular button */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add some shadow */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.chat-toggle:hover {
+  background-color: #562e70; /* Slightly darker color on hover */
+}
+
+.chat-toggle i {
+  font-size: 24px; /* Size of the chat icon */
+}

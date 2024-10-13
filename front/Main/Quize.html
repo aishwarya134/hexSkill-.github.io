@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="icon" href="lo" type="image/x-icon">
+    <link rel="stylesheet" href="Qstyle.css">
+    <script src="Qapp.js" defer></script>
+</head>
+
+<body>
+    <div class="head">
+        <img src="logo.png" alt="Logo" class="logo" />
+    </div>
+    <div class="main-wrapper">
+        <div class="loader-wrapper" show="false">
+            <span class="loader"></span>
+        </div>
+        <div class="main"></div>
+        <button class="prev" onclick="prevQuestion(),prevAnswer ()">Previous</button>
+                    <button class="next" onclick="nextQuestion(),nextAnswer ()">Next</button>
+    </div>
+    <div class="tool">
+        <button class="clear">clear</button>
+        <button class="submit">submit</button>
+        <button class="new" onclick="getData()">new questions</button>
+    </div>
+    <div class="result-container" show="false">
+        <div class="score-wrapper">
+            <div class="final">?/10</div>
+            <button class="close-btn">view answers</button>
+            <button class="new-q" onclick="getData()">new questions</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>welcome Skill Navigation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome CDN -->
+
+</head>
+  <section class="login-container">
+    <div class="content-wrapper">
+      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/d335420b612513bee108cc02a3a2298a125ca27d6d33a4ad9e5b942af6be9b5e?placeholderIfAbsent=true&apiKey=df7f47df87f04eca9ceb1657377bcfa8" class="background-image" alt="" />
+      <header class="header">
+        <div class="logo-container">
+          <img loading="lazy" src="logo.png" class="logo-image" alt="HexSkill+ logo" />
+        </div>
+        <nav class="nav-menu">
+          <a href="#about">ABOUT US</a>
+          <a href="#faq">FAQ</a>
+          <a href="login.html" class="login-button">LOG IN</a>
+        </nav>
+      </header>
+      <main class="welcome-message">
+        <h1>"Welcome to HexSkill+"</h1>
+    </main>
+
+    </div>
+    <div class="menu-container">
+      <div class="menu-button">
+          <i class="fas fa-bars"></i> Overview
+      </div>
+      <div class="menu-items">
+          <a href="course.html" class="menu-item">
+            <i class="fas fa-book"></i> Course
+          </a>
+          <a href="front-end/index.html" class="menu-item">
+           <i class="fas fa-check-circle"></i> Assessment</a>
+          <a href="Quize.html" class="menu-item"><i class="fas fa-question-circle"></i> Quiz</a>
+          <a href="dashboard.html" class="menu-item">
+            <i class="fas fa-tachometer-alt"></i> Dashboard
+          </a>
+          <a href="admindash.html" class="menu-item">
+            <i class="fas fa-user-shield"></i> Admin
+        </a>
+          <div class="menu-item"><i class="fas fa-sign-out-alt"></i> Logout</div> 
+      </div>
+  </div>
+  <div class="chat-toggle">
+    <i class="fas fa-comment-dots"></i>
+  </div>
+  <script>
+      // Optional JavaScript to toggle the menu visibility
+      const menuButton = document.querySelector('.menu-button');
+      const menuItems = document.querySelector('.menu-items');
+
+      menuButton.addEventListener('click', () => {
+          menuItems.classList.toggle('show');
+      });
+  </script>
+  </section>
+  </body>
+</html>

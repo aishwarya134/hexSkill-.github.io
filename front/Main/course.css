@@ -1,0 +1,188 @@
+body {  
+    font-family: Arial, sans-serif;  
+    margin: 0;  
+    padding: 0;  
+}  
+
+/* Styling for the header */
+/* Styling for the header */
+.header {
+  background-color: #674188;
+  padding: 15px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+/* Styling for the logo */
+.header img {
+  width: 150px;
+  margin: 0;
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: -100%; /* Fully hide the menu container */
+  width: 220px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 1rem;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+.menu-container.show {
+  left: 0; /* Show the menu container when .show class is applied */
+}
+
+.menu-button {
+  margin-top: 10px; 
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem ;
+  background-color:  #674188;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  width: 200px;
+}
+
+.menu-button i {
+  margin-right: 0.5rem;
+}
+
+.menu-button:hover {
+  background-color: #674188;
+}
+
+
+/* Menu Items Styling */
+.menu-items {
+  margin-top: 1rem;
+}
+
+.menu-item {
+  background-color: #f1f1f1;
+  padding: 0.8rem;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.menu-item:hover {
+  background-color: #e0e0e0;
+}
+
+.menu-item i {
+  margin-right: 0.5rem;
+}
+
+/* Course activities section (placed below the menu button) */
+.course-activities {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+
+header h1, header h2, header h3, header p {
+  font-size: 16px; /* Adjust this font size as per your needs */
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  font-size: 20px; /* Slightly smaller toggle icon */
+  cursor: pointer;
+  color: black;
+  padding: 8px;
+  position: absolute;
+  left: 10px;
+  top: 45px; /* Positioned below the search bar */
+}
+
+.dashboard {  
+    display: grid;  
+    grid-template-columns: repeat(3, 1fr);  
+    gap: 20px;  
+    padding: 20px;  
+}  
+
+.activities, .statistics, .course-activities, .top-tutors, .my-planning, .completed-courses {  
+    background-color: #f9f9f9;  
+    padding: 20px;  
+    border-radius: 10px;  
+}  
+
+.progress {  
+    background-color: #e0e0e0;  
+    border-radius: 5px;  
+    height: 20px;  
+    width: 100%;  
+}  
+
+.progress-bar {  
+    background-color: #0067cd;  
+    height: 100%;  
+    text-align: center;  
+    line-height: 20px;  
+    color: white;  
+}
+.chat-toggle {
+    position: fixed; /* Fixed position to stay in place */
+    bottom: 20px; /* Distance from the bottom of the page */
+    right: 20px; /* Distance from the right of the page */
+    background-color: #674188; /* Background color */
+    color: white; /* Icon color */
+    padding: 15px; /* Padding for the button */
+    border-radius: 50%; /* Make it a circular button */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add some shadow */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+  }
+  
+  .chat-toggle:hover {
+    background-color: #562e70; /* Slightly darker color on hover */
+  }
+  
+  .chat-toggle i {
+    font-size: 24px; /* Size of the chat icon */
+  }
+  @media (max-width: 600px) {
+    .menu-container {
+      width: 100%;
+      left: 0; /* Full width on smaller screens */
+    }
+  }
+  
+  .logo {
+    margin-bottom: 1.5rem;
+}
+
+.logo img {
+    max-width: 50px; /* Adjust this value to decrease the size */
+    height: auto;    /* Maintain the aspect ratio */
+}
+
+
+.progress {
+  background-color: #e0e0e0;
+  border-radius: 25px;
+  overflow: hidden;
+  width: 100%;
+  height: 20px;
+}
+
+.progress-bar {
+  background-color: #0067cd;
+  height: 100%;
+  color: white;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 25px;
+}

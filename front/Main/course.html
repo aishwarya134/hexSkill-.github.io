@@ -1,0 +1,115 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Dashboard</title>  
+    <link rel="stylesheet" href="course.css">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome CDN -->
+
+</head>  
+<body>  
+    <div class="header">  
+        <img src="logo.png" alt="Logo" />  
+    </div>   
+    <div class="menu-button">
+      <i class="fas fa-bars"></i> Menu
+    </div>
+      </div>   
+    <div class="course-activities">  
+        <h2>Course Activities</h2>  
+        <div class="progress">  
+            <div class="progress-bar" style="width: 75%;">75%</div>  
+        </div>  
+    </div> 
+   <div class="dashboard">  
+        <div class="activities">  
+            <h2>Activities</h2>  
+            <ul>
+                <li>Coming soon</li>    
+            </ul>  
+        </div>  
+        
+        <div class="statistics">  
+            <h2></h2>  
+            <ul>
+                <li>Coming soon</li>    
+            </ul>   
+        </div>  
+ 
+    
+        <div class="top-tutors">  
+            <h2>.Net</h2>  
+            <ul>
+                <li>Selection</li>  
+                <li>Basic</li>  
+                <li>Intermediate</li>  
+                <li>Advance</li>    
+            </ul>  
+        </div>  
+
+        <div class="my-planning">  
+            <h2>Java Batch</h2>  
+            <ul>  
+                <li>Selection</li>  
+                <li>Basic</li>  
+                <li>Intermediate</li>  
+                <li>Advance</li>  
+            </ul>  
+        </div>  
+
+        <div class="completed-courses">  
+            <h2>Completed Courses</h2>  
+            <ul>  
+                <li>Java Code - 75/100</li>  
+                <li>Design Basic - 65/100</li>  
+                <li>Team Building - 30/100</li>  
+            </ul>  
+        </div>  
+    </div>  
+    <!-- Menu Button (can be placed anywhere) -->
+
+  
+  <!-- Menu Container (Initially hidden off-screen) -->
+  <div class="menu-container">
+    <div class="menu-items">
+      <a href="course.html" class="menu-item">
+        <i class="fas fa-book"></i> Course
+      </a>
+        <a href="front-end/index.html" class="menu-item">
+        <i class="fas fa-check-circle"></i> Assessment
+      <a href="Quize.html" class="menu-item">
+        <i class="fas fa-question-circle"></i> Quiz
+      </a>
+      <a href="dashboard.html" class="menu-item">
+        <i class="fas fa-tachometer-alt"></i> Dashboard
+      </a>
+      <a href="admindash.html" class="menu-item">
+        <i class="fas fa-user-shield"></i> Admin
+      </a>
+      <!-- Optionally add a logout button here -->
+    </div>
+  </div>
+  
+     
+      <script>
+        const menuButton = document.querySelector('.menu-button');
+        const menuContainer = document.querySelector('.menu-container');
+      
+        // Add event listener to toggle the "show" class on menu-container
+        menuButton.addEventListener('click', () => {
+          menuContainer.classList.toggle('show');
+        });
+      
+        // Optionally, close the menu if clicked outside
+        document.addEventListener('click', (event) => {
+          if (!menuButton.contains(event.target) && !menuContainer.contains(event.target)) {
+            menuContainer.classList.remove('show');
+          }
+        });
+      </script>
+      
+    <script src="chatbot.js"></script>
+    
+</body>  
+</html>
